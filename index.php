@@ -38,7 +38,7 @@ function saveToDatabase($object)
 	mysql_connect($dbhost,$dbuser,$dbpass);
 	mysql_select_db($dbname);
 
-	$result = mysql_insert('android', $object);
+	$result = mysql_insert($table, $object);
 	if (!$result) {
     	die('Invalid query: ' . mysql_error());
 	}
